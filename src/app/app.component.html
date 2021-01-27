@@ -1,78 +1,80 @@
 <!DOCTYPE html>
 
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 </head>
+
 <body>
   <div class="container-fluid">
-    <h4>Employee Details (&lt; total_no_of_employees: {{count}}&gt;)</h4>
+    <h4>Employee Details (&lt; total_no_of_employees: {{count}} &gt;)</h4>
     <hr class="hr-primary" />
-    </div>
-    <div class="container-fluid">
-      <select>  
-        <option name="departments" *ngFor="let el of elements">{{el.departments}} </option>  
-     </select>
+  </div>
+  <div class="container-fluid">
+    <select>
+      <option name="departments" *ngFor="let el of elements">{{el.departments}} </option>
+    </select>
 
 
 
-     <!-- <select>  
-      <select [(ngModel)]="dHeader.departments" (ngModelChange)="SearchProduct(dHeader.departments)">    
+    <!-- <select>  
+      <select [(ngModel)]="dHeader.headElements" (ngModelChange)="SearchId(dHeader.elements)">    
     </select>  
-      <option *ngFor="let prod of dHeader">{{prod.departments}} </option>  
-</select> -->
-  <!-- <div class="dropdown">
-    <button class="btn dropdown-toggle" style="margin-right:5px" type="button" data-toggle="dropdown">Dropdown Example
-    <span class="caret"></span></button>
-    <ul class="dropdown-menu">
-      <li><a href="#">HTML</a></li>
-      <li><a href="#">CSS</a></li>
-      <li><a href="#">JavaScript</a></li>
-    </ul> -->
-    
-    <input type="text"placeholder="Name/email" style="margin:15px ;  border: 2px solid;">
-    <button type="submit"  value="Submit" style="margin:15px ;box-shadow: 2px 3px;">search</button>
-    <button type="submit"  value="Submit" style="margin:15px ;box-shadow: 2px 3px;">reset/Reload</button>
-
-    <!-- <input type="text" placeholder="Search.." name="search" style="margin:15px ;box-shadow: 2px 3px;"> -->
-    <!-- <input type="text" placeholder="Reset/Reload.." name="reset" style= "margin:15px; box-shadow:2px 3px;"> -->
-
-    <button class="btn dropdown-toggle btn pull-right" type="button" data-toggle="dropdown">Dropdown Example
-      <span class="caret"></span></button>
-      <ul class="dropdown-menu">
-        <li><a href="#">HTML</a></li>
-        <li><a href="#">CSS</a></li>
-        <li><a href="#">JavaScript</a></li>
-      </ul>
+      <option *ngFor="let prod of dHeader">{{prod.elements}} </option>
+      <div *ngIf="dHeader.departments">  
+        <h5>You have selected: {{dHeader.elements}}elements</h5>  
+    </div>    -->
 
 
+    <input type="text" placeholder="Name/email" style="margin:15px ;  border: 2px solid;">
+    <!-- <input [(ngModel)]="searchText" placeholder="search text goes here">
+<ul>
+  <li *ngFor="let el of elements | filter ">
+    {{el}}
+  </li>
+</ul> -->
+    <button type="submit" value="Submit" style="margin:15px ;box-shadow: 2px 3px;">search</button>
+    <button type="submit" value="Submit" style="margin:15px ;box-shadow: 2px 3px;">reset/Reload</button>
 
-    
 
+    <select id="range" >
+      <option value="name">A-Z</option>
+      <option value="name">a-z</option>
+      <option value="age">age</option>
+
+      <option value="email">email</option>
+
+
+    </select>
   </div>
 
-<hr>
-<div class="container-fluid">
-  <table mdbTable >
-    <thead>
-      <tr>
-        <th *ngFor="let head of headElements" scope="col">{{head}} </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr mdbTableCol *ngFor="let el of elements" >
-        <th scope="row">{{el.name}}</th>
-        <td>{{el.age}}</td>
-        <td>{{el.email}}</td>
-        <td>{{el.departments}}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+  <hr>
+  <div class="container-fluid">
+    <table mdbTable>
+      <thead>
+        <tr>
+          <th *ngFor="let head of headElements" scope="col">{{head}} </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr mdbTableCol  *ngFor="let el of elements" >
+          <th scope="row">{{el.name}}</th>
+          <td>{{el.age}}</td>
+          <td>{{el.email}}</td>
+
+         <td>{{el.departments}}<div class="tooltip">
+            <span class="tooltiptext">{{el.departments}}</span>
+          </div></td> 
+          
+        
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 </body>
-

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -13,8 +14,8 @@ export class AppComponent implements OnInit {
   
   public Details: object = [];  
    
-  SearchProduct(departments: string) {  
-    let obj = this.elements.filter(m => m.departments == this.elements);  
+  SearchId(departments:any) {  
+    let obj = this.elements.filter(m => m.departments == this.headElements);  
     this.Details = obj;  
     return this.Details;  
     }  
@@ -29,7 +30,7 @@ export class AppComponent implements OnInit {
  }
 
  public headElements:any=
-  ['name', 'Age', 'Email ', 'Departments'];
+  ['name', 'Age', 'Email ', 'departments'];
   
 public elements :any= [
     {
@@ -75,11 +76,7 @@ public elements :any= [
     //   departments: ["MSC"],
     // },
   ];
-  // SearchId(name: string) {  
-  //   let obj = this.elements.filter(m => m.Name == name);  
-  //   this.Details = obj;  
-  //   return this.Details;  
-  //   }  
+
 
 ngOnInit(){
  this.count=Object.keys(this.elements).length;
