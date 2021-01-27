@@ -21,13 +21,15 @@
 
 
 
-    <!-- <select>  
-      <select [(ngModel)]="dHeader.headElements" (ngModelChange)="SearchId(dHeader.elements)">    
+    <select>  
+      <select [(ngModel)]="dHeader.departments
+      " (ngModelChange)="SearchId(dHeader.elements)">    
     </select>  
       <option *ngFor="let prod of dHeader">{{prod.elements}} </option>
       <div *ngIf="dHeader.departments">  
         <h5>You have selected: {{dHeader.elements}}elements</h5>  
-    </div>    -->
+    </div>   
+    </select>
 
 
     <input type="text" placeholder="Name/email" style="margin:15px ;  border: 2px solid;">
