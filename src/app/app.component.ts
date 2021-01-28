@@ -69,12 +69,12 @@ public elements :any= [
       email: "Six@gmail.com",
       departments: ["Computer", "Physics"],
     },
-    // {
-    //   name: "Employee seven",
-    //   age: 100,
-    //   email: "tom@gmail.com",
-    //   departments: ["MSC"],
-    // },
+    {
+      name: "Employee seven",
+      age: 100,
+      email: "tom@gmail.com",
+      departments: ["MSC"],
+    },
   ];
 
 

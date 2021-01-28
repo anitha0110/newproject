@@ -21,7 +21,7 @@
 
 
 
-    <select>  
+    <!-- <select>  
       <select [(ngModel)]="dHeader.departments
       " (ngModelChange)="SearchId(dHeader.elements)">    
     </select>  
@@ -29,7 +29,7 @@
       <div *ngIf="dHeader.departments">  
         <h5>You have selected: {{dHeader.elements}}elements</h5>  
     </div>   
-    </select>
+    </select> -->
 
 
     <input type="text" placeholder="Name/email" style="margin:15px ;  border: 2px solid;">
@@ -68,9 +68,9 @@
           <td>{{el.age}}</td>
           <td>{{el.email}}</td>
 
-         <td>{{el.departments}}<div class="tooltip">
-            <span class="tooltiptext">{{el.departments}}</span>
-          </div></td> 
+         <td class = "cellcomment">{{el.departments}}<span class="CellComment">Here is a comment</span>
+            <!-- <span class="tooltiptext">{{el.departments}}</span> -->
+          </td> 
           
         
           
