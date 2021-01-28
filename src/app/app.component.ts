@@ -9,6 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'AngularProject';
   count:number;
+  
+
+
+
   // departments=["computer","physics"];
   public dHeader = [{ departments: 'computer' }, { departments: 'physics'}, { departments: 'chemistry' }];
   
@@ -21,8 +25,12 @@ export class AppComponent implements OnInit {
     }  
        
   constructor(){
-    this.getDetails();
+    // this.getDetails();
+
+    
   }
+  
+
   
   getDetails() {  
           
